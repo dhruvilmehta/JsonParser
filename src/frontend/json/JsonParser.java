@@ -39,7 +39,7 @@ public class JsonParser extends Parser {
 
             return iCode;
         } catch (Exception e) {
-            System.out.println("Exception in JsonParser" + e);
+            System.out.println("Exception in JsonParser " + e);
         }
         return null;
     }

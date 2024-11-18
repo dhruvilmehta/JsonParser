@@ -18,28 +18,21 @@ public class ICodePrinter {
     }
 
     private void printNode(ICodeNode node, int level) {
-        // Indentation for readability
         String indent = "  ".repeat(level);
-
-        // Print the node type
         ps.println(indent + "Node Type: " + node.getType());
 
-        // Print the node attributes
         Map<ICodeKey, Object> attributes = node.getAttributes();
         if (!attributes.isEmpty()) {
             ps.println(indent + "  Attributes:");
-            for (Map.Entry<ICodeKey, Object> entry : attributes.entrySet()) {
+            for (Map.Entry<ICodeKey, Object> entry : attributes.entrySet())
                 ps.println(indent + "    " + entry.getKey() + ": " + entry.getValue());
-            }
         }
 
-        // Recursively print child nodes
         List<ICodeNode> children = node.getChildren();
         if (!children.isEmpty()) {
             ps.println(indent + "Children:");
-            for (ICodeNode child : children) {
+            for (ICodeNode child : children)
                 printNode(child, level + 1);
-            }
         }
     }
 }

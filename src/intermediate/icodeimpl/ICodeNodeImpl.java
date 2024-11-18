@@ -51,4 +51,8 @@ public class ICodeNodeImpl extends HashMap<ICodeKey, Object> implements ICodeNod
     public HashMap<ICodeKey, Object> getAttributes() {
         return new HashMap<>(this);
     }
+
+    public String toString() {
+        return (String) getAttributes().get(ICodeKeyImpl.VALUE);
+    }
 }
