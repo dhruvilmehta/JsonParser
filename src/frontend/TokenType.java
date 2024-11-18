@@ -1,0 +1,13 @@
+package src.frontend;
+
+public enum TokenType {
+    OPEN_CURLY_BRACE, CLOSE_CURLY_BRACE,
+    COMMA, COLON,
+    OPEN_SQUARE_BRACE, CLOSE_SQUARE_BRACE,
+    STRING_LITERAL,
+    NUMERIC_LITERAL,
+    BOOLEAN_LITERAL,
+    NULL_LITERAL,
+
+    EOF
+}
